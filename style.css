@@ -1,0 +1,181 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+	
+	 	font-size: 12px;
+}
+
+:root {
+	--softviolent: hsl(273, 75%, 66%) ;
+	--softblue:hsl(240, 6%, 50%);
+	--divider:hsl(240, 5%, 91%) ;
+	--text: hsl(237, 12%, 33%);
+	--quest:hsl(240, 6%, 50%);
+}
+ 
+ .accordion {
+ 	display: grid;
+ 	grid-template-columns: minmax(375px, 1440px);
+ 	background: var(--softviolent);
+ 	min-height: 750px;
+ 	position: relative;
+ 	
+ 	
+ }
+ .sec-faq {
+ 	width: 325px;
+ 
+ 
+ margin: auto;
+ border-radius: 5%;
+ padding-left: 1rem;
+ padding-right: 1rem;
+ padding-top: 4rem;
+ background: url('images/bg-pattern-mobile.svg');
+ background-position: center 1.5rem;
+ background-repeat: no-repeat;
+ background-color: white;
+ 
+ 
+
+ }
+
+ h1	{
+ 	text-align: center;
+ 	margin-bottom: 1.5rem;
+ 	padding-top: 5rem;
+ 	
+
+ }
+
+ .content {
+ 	
+ 	border-bottom: 1px solid var(--divider);
+ 	margin-bottom: .5rem;
+ 	margin-top: .2rem;
+ 	overflow: hidden;
+ }
+ .content p {
+ 
+  margin-bottom: .5rem;
+   transform: translateY(50px);
+ }
+
+ img {
+ 	margin-left: 2rem;
+ }
+
+ span:hover {
+  
+  color:hsl(14, 88%, 65%) ;
+ }
+ 
+ span:hover + .content>p {
+ 	transform: translateY(0px);
+ 	transition: 1s;
+ }
+span:hover > img {
+	transform: rotate(180deg);
+	transition: 1s;
+}
+.img-woman {
+	width: 15rem;
+	position: absolute;
+	top: 0rem;
+	left: 2rem;
+	z-index: 1;
+
+}
+@media(min-width:425px) {
+   .img-woman {
+	width: 15rem;
+	position: absolute;
+	top: 0rem;
+	left: 4rem;
+	z-index: 1;
+	
+	}
+
+@media(min-width:768px) {
+   .img-woman {
+	width: 15rem;
+	position: absolute;
+	top: 0rem;
+	left: 14.5rem;
+	z-index: 1;
+	
+	}
+
+	@media(min-width: 1024px){
+      .sec-faq {
+       min-width: 800px;
+       background: url('images/bg-pattern-desktop.svg');
+      background-position: left  bottom;
+ background-repeat: no-repeat;
+ background-color: white;
+ background-size: 20rem;
+      }
+      .sec-faq > div {
+      	margin-left: 400px;
+      
+      	 width: 20rem;
+      }
+	.img-woman {
+	width: 20rem;
+	position: absolute;
+	top: 25rem;
+	left: 6rem;
+	z-index: 1;
+	
+	}
+	h1 {
+	text-align: center;
+	margin-left: 100px;	
+	}
+
+	}
+
+	
+@media(min-width: 1440px){
+	.accordion {
+		background: linear-gradient(to bottom, var(--softviolent), var(--softblue));
+		position: relative;
+		display: grid;
+
+	}
+	.accordion:after {
+		content: url('images/illustration-woman-online-desktop.svg');
+		position: absolute;
+		left: 100px;
+		top: 200px;
+		
+    }
+
+   
+
+	.sec-faq {
+		min-width: 950px;
+		font-size: .8rem;
+		background: url('images/bg-pattern-desktop.svg');
+      background-position: left  bottom;
+ background-repeat: no-repeat;
+ background-color: white;
+ background-size: 25rem;
+	}
+	.sec-faq > div {
+		width: 25rem;
+
+
+	}
+	.img-woman {
+		display: none;
+	}
+	span img {
+		margin-left: 4rem;
+	}
+}
